@@ -1,0 +1,36 @@
+[macros/brandmonitor_index]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 7.1.2
+modtime = 1533082765.589355000
+
+[macros/brandmonitor_collect]
+access = read : [ * ], write : [ admin ]
+export = system
+owner = admin
+version = 7.0.2
+modtime = 1534242587.749312000
+
+[app/install/state]
+version = 7.0.2
+modtime = 1533906870.218907000
+
+[lookups/brandmonitor.csv]
+owner = admin
+version = 7.0.2
+modtime = 1534240962.380685000
+
+[savedsearches/Brand%20Monitor%20-%20Alert]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 7.0.2
+modtime = 1535544567.657003000
+
+[savedsearches/Run%20Brandmonitor]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = admin
+version = 7.0.2
+modtime = 1534432712.586934000
