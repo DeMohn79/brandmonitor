@@ -8,6 +8,7 @@ import fnmatch
 import re
 import sys
 import time
+import base64
 
 @Configuration()
 class BrandMonitorCommand(GeneratingCommand):
@@ -32,7 +33,10 @@ class BrandMonitorCommand(GeneratingCommand):
             self.logger.fatal("date has to be in format YYYY-MM-DD, is " + self.date)
             exit(1)
 
-        url = "https://whoisds.com//whois-database/newly-registered-domains/" + self.date + ".zip/nrd"
+        filename = self.date + ".zip" 
+
+        url = "https://whoisds.com//whois-database/newly-registered-domains/" + base64.urlsafe_b64encode(filename) + "/nrd"
+
 
         # download stream from url
 
