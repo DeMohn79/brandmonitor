@@ -33,7 +33,7 @@ class BrandMonitorCommand(GeneratingCommand):
             self.logger.fatal("date has to be in format YYYY-MM-DD, is " + self.date)
             exit(1)
 
-        filename = base64.urlsafe_b64encode('2019-01-14.zip'.encode()).decode("utf-8")
+        filename = base64.urlsafe_b64encode((self.date + ".zip").encode()).decode("utf-8")
 
         url = "https://whoisds.com//whois-database/newly-registered-domains/" + filename + "/nrd"
 
